@@ -3,34 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link 
+    rel="preload" 
+    href="/assets/fonts/fraunces-v38-latin-700.woff2" 
+    as="font" 
+    type="font/woff2" 
+    crossorigin
+  >
+  <link 
+    rel="preload" 
+    href="/assets/fonts/montserrat-v31-latin-500.woff2" 
+    as="font" 
+    type="font/woff2" 
+    crossorigin
+  >
+  <link 
+    rel="preload" 
+    href="/assets/fonts/montserrat-v31-latin-700.woff2" 
+    as="font" 
+    type="font/woff2" 
+    crossorigin
+  >
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Product preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-
-  Perfume
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
+  <main class="product">
+    <picture class="product__picture">
+      <source srcset="./assets/images/image-product-desktop.jpg" media="(width >= 48em)">
+      <img src="./assets/images/image-product-mobile.jpg" width="684" height="700" alt="">
+    </picture>
+    <section class="product__information">
+      <p class="product__information-type">
+        Perfume
+      </p>
+      <p  class="product__information-name">
+        Gabrielle Essence Eau De Parfum
+      </p>
+      <p class="product__information-description">
+        A floral, solar and voluptuous interpretation 
+        composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+      </p>
+      <p 
+        class="product__information-price"
+      >
+        $149.99
+        <span 
+          class="price-discount--style"
+        > 
+        $169.99
+      </span>
+    </p>
+      <button 
+        type="button"
+        class="product__information-button"
+      >
+        Add to Cart
+      </button>
+    </section>
+  </main>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Jeffrey Riazonda</a>.
   </footer>
 </body>
 </html>

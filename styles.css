@@ -85,7 +85,8 @@ body {
   flex-direction: column;
   background-color: var(--White);
   border-radius: 0.5rem;
-  inline-size: 22rem;
+  /* inline-size: 22rem; */
+  inline-size: clamp(22rem, 16.542rem + 23.286vw, 37.5rem);
   margin-block: 5rem;
 }
 
@@ -152,6 +153,17 @@ body {
 
 @media (width >= 48em) {
   /* when viewport size is 768px and above */
+  .product {
+    flex-direction: row;
+  }
+
+  .product__picture {
+    flex: 1;
+  }
+
+  .product__information {
+    flex: 1;
+  }
 }
 @media (width < 48em) {
   /* when viewport size is below 768px */

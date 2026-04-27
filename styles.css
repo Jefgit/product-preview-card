@@ -85,8 +85,7 @@ body {
   flex-direction: column;
   background-color: var(--White);
   border-radius: 0.5rem;
-  /* inline-size: 22rem; */
-  inline-size: clamp(22rem, 16.542rem + 23.286vw, 37.5rem);
+  inline-size: 22rem;
   margin-block: 5rem;
 }
 
@@ -134,13 +133,15 @@ body {
   height: 1rem;
   display: inline-block;
   text-decoration: line-through;
+  color: var(--Black);
 }
 
 .product__information-button {
+  font-weight: 500;
   color: var(--White);
   background-color: var(--Green-500);
-  padding: 1rem;
-  border-radius: 0.75rem;
+  padding: 1em;
+  border-radius: 0.5rem;
 }
 
 .attribution {
@@ -155,14 +156,19 @@ body {
   /* when viewport size is 768px and above */
   .product {
     flex-direction: row;
+    inline-size: 37.5rem;
   }
 
   .product__picture {
-    flex: 1;
+    width: 50%;
   }
 
   .product__information {
-    flex: 1;
+    width: 50%;
+  }
+
+  .product__picture img {
+    border-radius: 0.5rem 0 0 0.5rem;
   }
 }
 @media (width < 48em) {
